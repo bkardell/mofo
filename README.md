@@ -4,8 +4,8 @@ Everybody seems to be creating serialization formats, so here's mine: Mark's Obj
 
 ## Rationale
 
-JSON is fairly lightweight, but it's still cruftier than it needs to be and doesn't handle dates properly.
-MOFO reduces the cruft and does dates.
+JSON is fairly lightweight, but it's still cruftier than it needs to be and doesn't handle dates or some other really useful bits properly.
+MOFO reduces the cruft and does additional useful stuff (dates, binaries, typed nulls and comments).
 
 ## RFC
 
@@ -111,13 +111,18 @@ Which, since whitespace is insignificant, could also be formatted thusly:
 
 ````
 {
-  Name $Phoenix$
+  Name $Phoenix$ 
   Chassis $Titan V$
   Drive $Warp$
   First launch /2063-04-05/
   Real !
   Thumbnail &94a2f19094213a6f8241a9408266f957&
   Crew [$Cochrane$Riker$La Forge$]
+  ©© 
+     And it can have comments...
+     Comments: Do you speak them MOFO?
+     Yes, yes I do.
+  ©©
 }
 ````
 
